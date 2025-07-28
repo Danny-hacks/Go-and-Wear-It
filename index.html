@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ló Wó - Go and Wear It</title>
     <meta name="description" content="Ló Wó celebrates African heritage through fashion, blending tradition with modern styles.">
-    
-    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8PhlEeUHFv9e1FJECjf.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8PhlEeUHFv9e1FFECjf.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFv-zO-oWPkIhLg_WzR4jaAPi-Crx_Q-21GfXWkQ.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
+    
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preload" href="assets/images/portrait-person-doing-arts-crafts.jpg" as="image">
+    <link rel="preload" href="assets/images/logo.png" as="image">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <div id="main-content"></div> <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="assets/images/logo.png" alt="Ló Wó Logo" class="logo">
+                <img src="assets/images/logo.png" alt="Ló Wó Logo" class="logo" loading="lazy">
                 <span class="logo-text">Ló Wó</span>
             </div>
             <ul class="nav-menu" id="nav-menu">
@@ -29,7 +36,7 @@
                 <li><a href="#style" class="nav-link">Our Style</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button class="mobile-toggle" id="mobile-toggle">
+            <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="nav-menu">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -47,7 +54,7 @@
                 <div class="shape shape-4"></div>
             </div>
         </div>
-        
+
         <div class="hero-container">
             <!-- Left Content -->
             <div class="hero-content">
@@ -55,16 +62,16 @@
                     <i class="fas fa-star"></i>
                     <span>African Heritage Fashion</span>
                 </div>
-                
+
                 <h1 class="hero-title">
                     <span class="title-main">Ló Wó</span>
                     <span class="title-sub">Go and Wear It</span>
                 </h1>
-                
+
                 <p class="hero-description">
                     Celebrating the rich tapestry of African heritage through contemporary fashion that speaks to the soul. Each piece tells a story of cultural pride and modern elegance.
                 </p>
-                
+
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">Unique</span>
@@ -81,7 +88,7 @@
                         <span class="stat-label">First</span>
                     </div>
                 </div>
-                
+
                 <div class="hero-actions">
                     <a href="#about" class="cta-primary">
                         <span>Discover Our Story</span>
@@ -93,42 +100,45 @@
                 </div>
             </div>
             
+            
+
             <!-- Right Images -->
             <div class="hero-images">
                 <div class="image-grid">
                     <div class="image-card main-image">
-                        <img src="assets\images\portrait-person-doing-arts-crafts.jpg?w=400&h=600&fit=crop&crop=face" alt="African Fashion Model">
+                        <img src="assets/images/portrait-person-doing-arts-crafts.jpg" alt="African Fashion Model" loading="eager">
                         <div class="image-overlay">
                             <span class="image-tag">Authentic</span>
                         </div>
                     </div>
-                    
+
                     <div class="image-card secondary-image">
-                        <img src="assets\images\medium-shot-beautiful-woman-with-braids.jpg?w=300&h=400&fit=crop&crop=face" alt="Traditional African Wear">
+                        <img src="assets/images/medium-shot-beautiful-woman-with-braids.jpg" alt="Traditional African Wear" loading="lazy">
                         <div class="image-overlay">
                             <span class="image-tag">Bold</span>
                         </div>
                     </div>
-                    
+
                     <div class="image-card accent-image">
-                        <img src="assets\images\medium-shot-beautiful-african-woman-posing.jpg?w=250&h=300&fit=crop&crop=face" alt="Modern African Style">
+                        <img src="assets/images/medium-shot-beautiful-african-woman-posing.jpg" alt="Modern African Style" loading="lazy">
                         <div class="image-overlay">
                             <span class="image-tag">Elegant</span>
                         </div>
                     </div>
                 </div>
                 
+                
                 <!-- Floating Elements -->
                 <div class="floating-elements">
-                    <div class="floating-card card-1">
+                    <div class="floating-card card-1" data-tilt>
                         <i class="fas fa-heart"></i>
                         <span>Made with Love</span>
                     </div>
-                    <div class="floating-card card-2">
+                    <div class="floating-card card-2" data-tilt>
                         <i class="fas fa-shipping-fast"></i>
                         <span>Worldwide</span>
                     </div>
-                    <div class="floating-card card-3">
+                    <div class="floating-card card-3" data-tilt>
                         <i class="fas fa-medal"></i>
                         <span>Premium Quality</span>
                     </div>
@@ -148,7 +158,7 @@
                 <h2 class="section-title">About Ló Wó</h2>
                 <p class="section-subtitle">Where tradition meets contemporary elegance</p>
             </div>
-            
+
             <div class="about-content">
                 <div class="about-grid">
                     <div class="about-text">
@@ -156,7 +166,7 @@
                             <h3>Our Story</h3>
                             <p>Ló Wó celebrates the rich tapestry of African heritage through fashion that speaks to the soul. Our brand weaves together the timeless elegance of traditional African aesthetics with contemporary design sensibilities.</p>
                             <p>Each garment tells a story of cultural pride, authenticity, and the beautiful journey of self-expression through style. We believe fashion is more than clothing—it's a celebration of identity and heritage.</p>
-                            
+
                             <div class="about-features">
                                 <div class="feature">
                                     <i class="fas fa-leaf"></i>
@@ -173,10 +183,10 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="about-visual">
                         <div class="visual-card">
-                            <img src="assets\images\portrait-african-woman-wearing-traditional-accessories-close-up.jpg" alt="African Fashion Heritage">
+                            <img src="assets/images/portrait-african-woman-wearing-traditional-accessories-close-up.jpg" alt="African Fashion Heritage" loading="lazy">
                             <div class="visual-overlay">
                                 <div class="overlay-content">
                                     <h4>Cultural Authenticity</h4>
@@ -201,11 +211,11 @@
                 <h2 class="section-title">Our Style Philosophy</h2>
                 <p class="section-subtitle">Three pillars that define our unique approach to fashion</p>
             </div>
-            
+
             <div class="style-grid">
                 <div class="style-card" data-tilt>
                     <div class="style-image">
-                        <img src="assets\images\medium-shot-women-clothes-shopping.jpg" alt="Authentic African Fashion">
+                        <img src="assets/images/medium-shot-women-clothes-shopping.jpg" alt="Authentic African Fashion" loading="lazy">
                         <div class="style-overlay">
                             <div class="overlay-icon">
                                 <i class="fas fa-gem"></i>
@@ -221,10 +231,10 @@
                         <div class="style-badge">Heritage First</div>
                     </div>
                 </div>
-                
+
                 <div class="style-card" data-tilt>
                     <div class="style-image">
-                        <img src="assets\images\portrait-african-woman-wearing-traditional-accessories-yellow-veil.jpg" alt="Bold African Fashion">
+                        <img src="assets/images/portrait-african-woman-wearing-traditional-accessories-yellow-veil.jpg" alt="Bold African Fashion" loading="lazy">
                         <div class="style-overlay">
                             <div class="overlay-icon">
                                 <i class="fas fa-fire"></i>
@@ -240,10 +250,10 @@
                         <div class="style-badge">Stand Out</div>
                     </div>
                 </div>
-                
+
                 <div class="style-card" data-tilt>
                     <div class="style-image">
-                        <img src="assets\images\african-woman-looking-away.jpg" alt="Elegant African Fashion">
+                        <img src="assets/images/african-woman-looking-away.jpg" alt="Elegant African Fashion" loading="lazy">
                         <div class="style-overlay">
                             <div class="overlay-icon">
                                 <i class="fas fa-crown"></i>
@@ -274,7 +284,7 @@
                 <h2 class="section-title">Join Our Community</h2>
                 <p class="section-subtitle">Follow our journey and be part of the Ló Wó family</p>
             </div>
-            
+
             <div class="contact-content">
                 <div class="glass-card contact-main">
                     <div class="contact-visual">
@@ -282,16 +292,16 @@
                             <i class="fab fa-instagram"></i>
                         </div>
                         <div class="contact-images">
-                            <img src="assets\images\line-hanging-textured-fabrics-different-colors-shades.jpg" alt="Fashion 1">
-                            <img src="assets\images\close-up-red-manila-shawl-fringes.jpg" alt="Fashion 2">
-                            <img src="assets\images\carpets-market-morocco.jpg" alt="Fashion 3">
+                            <img src="assets/images/line-hanging-textured-fabrics-different-colors-shades.jpg" alt="Fashion 1" loading="lazy">
+                            <img src="assets/images/close-up-red-manila-shawl-fringes.jpg" alt="Fashion 2" loading="lazy">
+                            <img src="assets/images/carpets-market-morocco.jpg" alt="Fashion 3" loading="lazy">
                         </div>
                     </div>
-                    
+
                     <div class="contact-info">
                         <h3>Follow Our Journey</h3>
                         <p>Join our community and be part of the Ló Wó story. Follow us on Instagram to see our latest collections, behind-the-scenes moments, and celebrate African fashion with us.</p>
-                        
+
                         <div class="contact-stats">
                             <div class="contact-stat">
                                 <span class="stat-number">Stay</span>
@@ -306,8 +316,8 @@
                                 <span class="stat-label">Drops</span>
                             </div>
                         </div>
-                        
-                        <a href="https://www.instagram.com/lowothelabel/" target="_blank" class="instagram-button">
+
+                        <a href="https://www.instagram.com/lowothelabel/" target="_blank" rel="noopener noreferrer" class="instagram-button">
                             <i class="fab fa-instagram"></i>
                             <span>Follow @lowothelabel</span>
                             <i class="fas fa-external-link-alt"></i>
@@ -324,22 +334,22 @@
             <div class="footer-content">
                 <div class="footer-main">
                     <div class="footer-logo">
-                        <img src="assets/images/logo.png" alt="Ló Wó Logo">
+                        <img src="assets/images/logo.png" alt="Ló Wó Logo" loading="lazy">
                         <div class="footer-brand">
                             <h4>Ló Wó</h4>
                             <p>Celebrating African heritage through fashion</p>
                         </div>
                     </div>
-                    
+
                     <div class="footer-social">
                         <h5>Connect with us</h5>
-                        <a href="https://www.instagram.com/lowothelabel/" target="_blank" class="social-link">
+                        <a href="https://www.instagram.com/lowothelabel/" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fab fa-instagram"></i>
                             <span>Instagram</span>
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="footer-bottom">
                     <p>&copy; 2025 Ló Wó. All rights reserved. Made with <i class="fas fa-heart"></i> for African fashion.</p>
                 </div>
@@ -347,7 +357,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
