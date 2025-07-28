@@ -46,6 +46,9 @@ body {
     overflow-x: hidden;
     min-height: 100vh;
 }
+body > a:nth-child(1){
+    display: none;
+}
 
 .container {
     max-width: 1200px;
@@ -552,7 +555,7 @@ body {
     height: 300px;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 1;
     animation: imageFloat2 6s ease-in-out infinite 2s;
 }
 
@@ -561,7 +564,7 @@ body {
     height: 200px;
     bottom: 50px;
     right: 60px;
-    z-index: 1;
+    z-index: 2;
     animation: imageFloat3 6s ease-in-out infinite 4s;
 }
 
